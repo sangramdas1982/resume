@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sangram Kumar Das | Application Development Leader</title>
+<meta name="description" content="Application development leader with 17+ years building business-critical banking applications in Python, SQL and GCP, backed by strong SRE practice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F7F9F9; --surface:#FFFFFF; --ink:#132A30; --muted:#4F6268; --line:#D3DEDF;
+  --teal:#0F5C63; --teal-soft:#E1EEEE; --amber:#C98A00;
+  --seg1:#9DBFC1; --seg2:#6FA3A7; --seg3:#3F8188; --seg4:#0F5C63;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#0F1B1E; --surface:#152429; --ink:#E5EEEF; --muted:#9FB3B7; --line:#2A3D42;
+    --teal:#6CC3C9; --teal-soft:#1C3439; --amber:#F0B73A;
+    --seg1:#2D5257; --seg2:#3D7076; --seg3:#4F9399; --seg4:#6CC3C9;
+    color-scheme:dark;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font:400 1rem/1.6 "Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Instrument Sans",system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:var(--teal);text-underline-offset:3px}
+a:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* Hero */
+header.hero{padding:64px 0 40px;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:700;letter-spacing:-.02em}
+.hero .role{font-size:clamp(1.1rem,2.2vw,1.4rem);color:var(--muted);margin:12px 0 0;max-width:46ch}
+.hero .role strong{color:var(--ink);font-weight:600}
+.contact{display:flex;flex-wrap:wrap;gap:10px 22px;margin:22px 0 0;padding:0;list-style:none;font-size:.97rem}
+.btn{display:inline-block;padding:9px 16px;border:1.5px solid var(--teal);border-radius:6px;text-decoration:none;font-weight:600}
+.btn:hover{background:var(--teal);color:var(--surface)}
+
+/* Career bar: proportional to years, 2009 to 2026 */
+.career{margin-top:44px}
+.career h2{font-size:1rem;font-weight:500;color:var(--muted);margin-bottom:10px}
+.bar{display:flex;height:46px;border-radius:6px;overflow:hidden}
+.bar div{display:flex;align-items:center;padding:0 10px;font-size:.8rem;font-weight:600;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.s1{flex:3.7} .s2{flex:2} .s3{flex:1.4} .s4{flex:10.5}
+.bar .s1{background:var(--seg1);color:var(--ink)}
+.bar .s2{background:var(--seg2)}
+.bar .s3{background:var(--seg3)}
+.bar .s4{background:var(--seg4)}
+@media (prefers-color-scheme:dark){.bar .s1{color:var(--ink)} .bar .s4{color:#0F1B1E}}
+.ticks{display:flex;font-size:.78rem;color:var(--muted);margin-top:6px}
+.ticks span{white-space:nowrap}
+.ticks .s4{display:flex;justify-content:space-between}
+
+/* Layout */
+.grid{display:grid;grid-template-columns:1fr 300px;gap:56px;padding-top:48px;padding-bottom:72px}
+main{min-width:0}
+section+section{margin-top:52px}
+h2.sec{font-size:1.6rem;font-weight:700;margin-bottom:18px}
+p{margin:0 0 14px;max-width:72ch}
+
+/* Figures */
+.figs{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:2px solid var(--ink);border-bottom:1px solid var(--line)}
+.fig{padding:16px 14px 14px 0}
+.fig+.fig{padding-left:14px;border-left:1px solid var(--line)}
+.fig b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:2rem;font-weight:700;color:var(--teal);line-height:1}
+.fig span{display:block;font-size:.85rem;color:var(--muted);margin-top:6px;line-height:1.35}
+
+/* Initiatives */
+.items{list-style:none;margin:0;padding:0}
+.items li{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:190px 1fr;gap:18px}
+.items li:first-child{padding-top:0}
+.items h3{font-size:1.02rem;font-weight:700;color:var(--teal)}
+.items p{margin:0}
+
+/* Experience */
+.job{padding:0 0 26px 22px;border-left:2px solid var(--line);position:relative}
+.job::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--teal)}
+.job:first-of-type::before{background:var(--teal)}
+.job h3{font-size:1.2rem;font-weight:700}
+.job .meta{color:var(--muted);font-size:.95rem;margin:4px 0 10px}
+.job .when{font-weight:600;color:var(--ink)}
+.job ul{margin:0;padding-left:1.1em}
+.job li{margin-bottom:6px;max-width:72ch}
+.job li::marker{color:var(--teal)}
+
+/* Sidebar */
+aside{font-size:.95rem}
+aside section+section{margin-top:36px}
+aside h2{font-size:1.15rem;font-weight:700;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.primary{background:var(--teal-soft);border-radius:8px;padding:16px 18px}
+.primary h2{border-bottom-color:var(--teal)}
+dl{margin:0} dt{font-weight:600;margin-top:12px} dt:first-child{margin-top:0} dd{margin:2px 0 0;color:var(--muted)}
+aside ul{margin:0;padding-left:1.1em} aside li{margin-bottom:6px}
+
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:.9rem}
+
+@media (max-width:900px){
+  .grid{grid-template-columns:1fr;gap:48px}
+  .figs{grid-template-columns:repeat(2,1fr)}
+  .fig{border-bottom:1px solid var(--line);padding-left:14px!important}
+  .fig:nth-child(odd){border-left:none;padding-left:0!important}
+  .fig:last-child{grid-column:1/-1}
+  .items li{grid-template-columns:1fr;gap:4px}
+}
+@media (max-width:560px){
+  header.hero{padding-top:40px}
+  .career{display:none}
+}
+@media print{
+  :root{--paper:#fff;--surface:#fff;--ink:#000;--muted:#333;--line:#bbb;--teal:#0F5C63;--teal-soft:#EEF4F4}
+  .btn,.career{display:none}
+  header.hero{padding:0 0 16px}
+  .grid{grid-template-columns:1fr 230px;gap:28px;padding-top:20px;padding-bottom:20px}
+  section+section{margin-top:24px}
+  .job,.items li{break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Sangram Kumar Das</h1>
+    <p class="role"><strong>Application Development Leader</strong> with SRE and cloud engineering depth, building banking technology for 17+ years.</p>
+    <ul class="contact">
+      <li>Singapore</li>
+      <li><a href="mailto:sangram-kumar.das@db.com">sangram-kumar.das@db.com</a></li>
+      <li><a href="tel:+6585001260">+65 8500 1260</a></li>
+      <li><a class="btn" href="Sangram_Kumar_Das_Resume.docx" download>Download resume (Word)</a></li>
+    </ul>
+
+    <div class="career" aria-label="Career timeline, 2009 to present">
+      <h2>Career, 2009 to today</h2>
+      <div class="bar">
+        <div class="s1" title="Dell Services, Apr 2009 to Dec 2012">Dell Services</div>
+        <div class="s2" title="Cognizant, Dec 2012 to Dec 2014">Cognizant</div>
+        <div class="s3" title="Optimum Solutions, Dec 2014 to May 2016">Optimum</div>
+        <div class="s4" title="Deutsche Bank, May 2016 to present">Deutsche Bank</div>
+      </div>
+      <div class="ticks" aria-hidden="true"><span class="s1">2009</span><span class="s2">2012</span><span class="s3">2014</span><span class="s4"><span>2016</span><span>Today</span></span></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap grid">
+<main>
+
+  <section id="summary">
+    <h2 class="sec">Summary</h2>
+    <p>Hands-on application development leader with 17+ years designing, building and delivering business-critical banking applications across private banking, wealth management and investment banking. I build in Python and SQL on cloud-native GCP services, and lead development teams from architecture and coding through testing, CI/CD and release.</p>
+    <p>Strong SRE practice backs that engineering focus, so the software my team ships stays secure, resilient and highly available in regulated environments.</p>
+  </section>
+
+  <section id="impact">
+    <h2 class="sec">2026 in numbers</h2>
+    <div class="figs">
+      <div class="fig"><b>3</b><span>major go-lives: two GCP, one AI</span></div>
+      <div class="fig"><b>80%</b><span>faster SOW generation after the AI go-live</span></div>
+      <div class="fig"><b>30%</b><span>productivity improvement</span></div>
+      <div class="fig"><b>0</b><span>major incidents, down from 15 in 2025</span></div>
+      <div class="fig"><b>99.93%</b><span>application availability</span></div>
+    </div>
+  </section>
+
+  <section id="initiatives">
+    <h2 class="sec">Recent initiatives</h2>
+    <ul class="items">
+      <li><h3>AI solution delivery</h3><p>Led the production go-live and post-launch optimization of Deutsche Bank Private Bank's flagship SOW AI solution, cutting operational time for SOW generation by up to 80%.</p></li>
+      <li><h3>Reconciliation engine</h3><p>Designed, developed and deployed a client-statement reconciliation solution that detects issues before client reporting. It caught and remediated five statement issues before delivery, protecting the bank from reputational and compliance risk.</p></li>
+      <li><h3>Real-time monitoring tool</h3><p>Designed, developed and deployed real-time Zscaler monitoring for PB Emerging Markets with automated daily and monthly reporting, eliminating a specific audit and compliance risk.</p></li>
+      <li><h3>Service integration</h3><p>Designed and developed application components in multiple programming languages to integrate applications with centralized STIP services, delivering the CIO GPS mandate for SLOM and STIP integration.</p></li>
+      <li><h3>Cloud migration</h3><p>Migrated Private Bank's RDM data warehouse from on-premises infrastructure to GCP, improving scalability, elasticity and end-of-day processing times.</p></li>
+      <li><h3>Data engineering</h3><p>Built complex SQL and BigQuery reports supporting business requirements, audit-risk mitigation, revenue generation and risk management.</p></li>
+      <li><h3>Client onboarding</h3><p>Led production engineering through the eKYC-EM go-live and hypercare, improving PB Emerging Markets client-onboarding efficiency by more than 30%.</p></li>
+      <li><h3>Operational resilience</h3><p>Stabilized the PB Emerging Markets application portfolio, reaching zero major incidents in 2026 (down from 15 in 2025) and 99.93% availability, and transitioned the team from the CIO to the GPS operating model.</p></li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2 class="sec">Experience</h2>
+
+    <article class="job">
+      <h3>Application Delivery Lead (Application Development &amp; SRE)</h3>
+      <p class="meta"><span class="when">May 2016 to present</span>, Deutsche Bank AG, Singapore. Private Bank Emerging Markets, team of 7.</p>
+      <ul>
+        <li>Lead hands-on design and development of application components, integrations, automation tools and data reports across multiple languages and GCP services, owning delivery of the PB Emerging Markets application portfolio.</li>
+        <li>Champion engineering quality through CI/CD automation and unit, system-integration, performance and regression testing; drive reuse of shared components and services to reduce duplication and accelerate delivery.</li>
+        <li>Lead technology modernization and performance improvement of high-performance trading systems, guiding engineers and vendor partners toward secure, predictable outcomes.</li>
+        <li>Oversee end-to-end program and release delivery using Agile practices (PI planning, delivery cadence, release governance), managing cross-team dependencies and deployment windows for business-critical systems.</li>
+        <li>Implement and continuously improve SRE/DevOps practices, SLOs/SLAs, monitoring and alerting to reduce MTTR and raise availability, keeping applications secure, compliant and operationally resilient.</li>
+        <li>As CSM, define stakeholder and user communications and lead major-incident and problem management.</li>
+        <li>Represent PB EM in GPS global forums and own key GPS KPIs (SLOM, STIP, db-GIANT); represent PB EM IT in stakeholder forums.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <h3>Application Developer (Application Development &amp; SRE)</h3>
+      <p class="meta"><span class="when">Dec 2014 to May 2016</span>, Optimum Solutions, Singapore. Client: Deutsche Bank AG, team of 7.</p>
+      <ul>
+        <li>Developed and enhanced interface scripts enabling reliable file delivery, operational monitoring and go-live support for Deutsche Bank Private Bank's major Avaloq implementation.</li>
+        <li>Automated application and operational processes in line with SRE principles, reducing manual effort and improving service efficiency.</li>
+        <li>Supported infrastructure planning, coordination and operational readiness for the Avaloq go-live.</li>
+        <li>Owned end-to-end application delivery and operations, resolving production incidents and driving permanent fixes through structured problem management.</li>
+        <li>Planned and deployed production changes under established release, change-management and operational-control procedures.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <h3>Software Engineer</h3>
+      <p class="meta"><span class="when">Dec 2012 to Dec 2014</span>, Cognizant Technology Solutions, Singapore. Client: UBS Singapore, team of 20.</p>
+      <ul>
+        <li>Supported investment-banking applications for fixed-income products, keeping operations reliable and resolving application issues on time.</li>
+        <li>Investigated and resolved production incidents, restoring service promptly and driving root-cause fixes for recurring issues through problem management.</li>
+        <li>Identified monitoring requirements and implemented proactive alerts to detect issues early and reduce service disruption.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <h3>Software Analyst</h3>
+      <p class="meta"><span class="when">Apr 2009 to Dec 2012</span>, Dell Services, Singapore. Client: UBS Singapore, team of 15.</p>
+      <ul>
+        <li>Provided operational support for fixed-income investment-banking applications, ensuring dependable service and timely issue resolution.</li>
+        <li>Analyzed recurring issues, determined root causes and implemented permanent fixes; defined monitoring needs and introduced proactive alerting.</li>
+      </ul>
+    </article>
+  </section>
+</main>
+
+<aside>
+  <section class="primary">
+    <h2>Development</h2>
+    <p style="margin:0">Application design and development in Python (Pandas, PySpark), SQL/BigQuery and shell. Cloud-native development on GCP (Cloud Run, GKE, Cloud Composer). AI agent development with Gemini. System integration, CI/CD, Terraform and test automation. Reusable components and shared services.</p>
+  </section>
+
+  <section>
+    <h2>SRE and operations</h2>
+    <p style="margin:0">SLO/SLA governance, observability, monitoring and alerting, incident and problem management, RCA, and toil reduction through automation.</p>
+  </section>
+
+  <section>
+    <h2>Technical skills</h2>
+    <dl>
+      <dt>Languages</dt><dd>Python (Pandas, PySpark), SQL, Unix shell, PowerShell</dd>
+      <dt>Cloud (GCP)</dt><dd>BigQuery, Cloud Run, GKE, Cloud Composer (Apache Airflow), PostgreSQL</dd>
+      <dt>AI and agentic</dt><dd>Gemini-based AI agent flows on Cloud Run, agentic AI, AI API integration, LLM fundamentals</dd>
+      <dt>DevOps and IaC</dt><dd>Terraform, GitHub Actions, Jenkins, Git, CI/CD pipelines</dd>
+      <dt>Databases</dt><dd>Oracle, SQL Server, Sybase, PostgreSQL, BigQuery, NoSQL</dd>
+      <dt>Middleware</dt><dd>IBM MQ, Kafka, WebLogic, Tomcat, JBoss, Apache, DWeb</dd>
+      <dt>Containers</dt><dd>Docker, Kubernetes (GKE), Fabric, DAP</dd>
+      <dt>Observability</dt><dd>Prometheus, Grafana, Splunk, Geneos</dd>
+      <dt>Scheduling and tooling</dt><dd>BMC Control-M, Autosys, Jira, GitHub, SVN; Unix and Windows</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Banking domain</h2>
+    <p style="margin:0">Order and execution management, payments and settlements, margining and collateral, derivatives post-trade processing, client platforms and core-banking integration.</p>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <ul>
+      <li>Google Cloud Certified, Associate Cloud Engineer (2026)</li>
+      <li>Deutsche Bank AI Engineer</li>
+      <li>Deutsche Bank Cloud Engineer</li>
+      <li>Deutsche Bank Global Enterprise Engineer</li>
+      <li>CFA Level I, completed</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <p style="margin:0"><strong>Bachelor of Engineering, Computer Science</strong><br>Biju Patnaik University of Technology, Odisha, India, 2002 to 2006</p>
+  </section>
+
+  <section>
+    <h2>Outside work</h2>
+    <p style="margin:0">Regular volunteer with the National Library Board (NLB), weightlifting, music and travel.</p>
+  </section>
+</aside>
+</div>
+
+<footer><div class="wrap">Sangram Kumar Das, Singapore. Updated October 2026.</div></footer>
+</body>
+</html>
